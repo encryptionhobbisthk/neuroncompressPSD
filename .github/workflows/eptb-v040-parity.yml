@@ -1,0 +1,54 @@
+name: EPTB v0.4 Rust parser parity
+
+on:
+  push:
+    branches: [eptb-v040-rust-build-20260723]
+
+permissions:
+  contents: write
+
+jobs:
+  parity:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Generate shared corpus and run Python parser
+        run: python3 eptb_ci_v040/parity.py eptb_ci_v040/parser_parity_corpus_v0.4.0.json eptb_ci_v040/python_parser_parity_v0.4.0.json
+      - name: Compile Rust parser
+        run: cargo build --release --manifest-path eptb_ci_v040/Cargo.toml
+      - name: Run Rust parser on identical corpus
+        run: eptb_ci_v040/target/release/eptb-parser eptb_ci_v040/parser_parity_corpus_v0.4.0.json eptb_ci_v040/rust_parser_parity_v0.4.0.json
+      - name: Require identical classifications
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          root=pathlib.Path('eptb_ci_v040')
+          py=json.loads((root/'python_parser_parity_v0.4.0.json').read_text())
+          rs=json.loads((root/'rust_parser_parity_v0.4.0.json').read_text())
+          pm={x['id']:x['actual'] for x in py['cases']}; rm={x['id']:x['actual'] for x in rs['cases']}
+          ids=sorted(set(pm)|set(rm)); bad=[i for i in ids if pm.get(i)!=rm.get(i)]
+          binary=root/'target/release/eptb-parser'
+          summary={
+            'format':'EPTBParserParitySummary','version':'0.4.0','commit':os.environ.get('GITHUB_SHA'),
+            'case_count':len(ids),'python_mismatch_count':py['mismatch_count'],'rust_mismatch_count':rs['mismatch_count'],
+            'cross_language_mismatch_count':len(bad),'cross_language_mismatches':bad,
+            'identical_classification':not bad and py['mismatch_count']==0 and rs['mismatch_count']==0,
+            'corpus_sha256':hashlib.sha256((root/'parser_parity_corpus_v0.4.0.json').read_bytes()).hexdigest(),
+            'rust_binary_sha256':hashlib.sha256(binary.read_bytes()).hexdigest(),
+            'rustc':subprocess.check_output(['rustc','--version'],text=True).strip(),
+            'cargo':subprocess.check_output(['cargo','--version'],text=True).strip(),
+          }
+          (root/'parser_parity_summary_v0.4.0.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          if not summary['identical_classification']: raise SystemExit(2)
+          PY
+      - name: Persist evidence on temporary branch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add eptb_ci_v040/parser_parity_corpus_v0.4.0.json eptb_ci_v040/python_parser_parity_v0.4.0.json eptb_ci_v040/rust_parser_parity_v0.4.0.json eptb_ci_v040/parser_parity_summary_v0.4.0.json
+          git commit -m 'Record EPTB v0.4 parser parity evidence [skip ci]'
+          git push
