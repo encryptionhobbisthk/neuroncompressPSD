@@ -1,0 +1,15 @@
+{
+  "cargo": "cargo 1.97.1 (c980f4866 2026-06-30)",
+  "case_count": 25,
+  "commit": "0d470bff93e43a5ba14147efebcd95be8e77788c",
+  "corpus_sha256": "b47359a7b47689adc14ec8ed8345328b31cbed4dd16979ee562d37a75f4217ad",
+  "cross_language_mismatch_count": 0,
+  "cross_language_mismatches": [],
+  "format": "EPTBParserParitySummary",
+  "identical_classification": true,
+  "python_mismatch_count": 0,
+  "rust_binary_sha256": "1d2a95db8eb7d6baf583e5e7449f3e16c3d9edec79efcb234458c7189faaaddc",
+  "rust_mismatch_count": 0,
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+  "version": "0.4.0"
+}

@@ -1,0 +1,134 @@
+{
+  "case_count": 25,
+  "cases": [
+    {
+      "actual": "OK",
+      "expected": "OK",
+      "id": "ok"
+    },
+    {
+      "actual": "RESOURCE_MAX_BLOCK_BYTES",
+      "expected": "RESOURCE_MAX_BLOCK_BYTES",
+      "id": "limit_block_bytes"
+    },
+    {
+      "actual": "RESOURCE_MAX_HEADER_BYTES",
+      "expected": "RESOURCE_MAX_HEADER_BYTES",
+      "id": "limit_header_bytes"
+    },
+    {
+      "actual": "RESOURCE_MAX_PAYLOAD_BYTES",
+      "expected": "RESOURCE_MAX_PAYLOAD_BYTES",
+      "id": "limit_payload_bytes"
+    },
+    {
+      "actual": "RESOURCE_MAX_TENSOR_WORDS",
+      "expected": "RESOURCE_MAX_TENSOR_WORDS",
+      "id": "limit_tensor_words"
+    },
+    {
+      "actual": "RESOURCE_MAX_BLOCK_WORDS",
+      "expected": "RESOURCE_MAX_BLOCK_WORDS",
+      "id": "limit_block_words"
+    },
+    {
+      "actual": "RESOURCE_MAX_STREAM_DECOMPRESSED_BYTES",
+      "expected": "RESOURCE_MAX_STREAM_DECOMPRESSED_BYTES",
+      "id": "limit_stream_decoded"
+    },
+    {
+      "actual": "RESOURCE_MAX_ARENA_BYTES",
+      "expected": "RESOURCE_MAX_ARENA_BYTES",
+      "id": "limit_arena"
+    },
+    {
+      "actual": "RESOURCE_MAX_STREAM_COUNT",
+      "expected": "RESOURCE_MAX_STREAM_COUNT",
+      "id": "limit_stream_count"
+    },
+    {
+      "actual": "FORMAT_TRUNCATED",
+      "expected": "FORMAT_TRUNCATED",
+      "id": "format_truncated"
+    },
+    {
+      "actual": "FORMAT_MAGIC",
+      "expected": "FORMAT_MAGIC",
+      "id": "format_magic"
+    },
+    {
+      "actual": "FORMAT_LENGTH",
+      "expected": "FORMAT_LENGTH",
+      "id": "format_length"
+    },
+    {
+      "actual": "INTEGRITY_BLOCK_SHA256",
+      "expected": "INTEGRITY_BLOCK_SHA256",
+      "id": "integrity_block"
+    },
+    {
+      "actual": "FORMAT_JSON",
+      "expected": "FORMAT_JSON",
+      "id": "format_json"
+    },
+    {
+      "actual": "FORMAT_JSON_ROOT",
+      "expected": "FORMAT_JSON_ROOT",
+      "id": "format_json_root"
+    },
+    {
+      "actual": "FORMAT_STREAMS",
+      "expected": "FORMAT_STREAMS",
+      "id": "format_streams"
+    },
+    {
+      "actual": "FORMAT_WORD_COUNT",
+      "expected": "FORMAT_WORD_COUNT",
+      "id": "format_word_count"
+    },
+    {
+      "actual": "FORMAT_DESCRIPTOR",
+      "expected": "FORMAT_DESCRIPTOR",
+      "id": "format_descriptor"
+    },
+    {
+      "actual": "FORMAT_DECODED_LENGTH",
+      "expected": "FORMAT_DECODED_LENGTH",
+      "id": "format_decoded_length"
+    },
+    {
+      "actual": "FORMAT_STREAM_NAME",
+      "expected": "FORMAT_STREAM_NAME",
+      "id": "format_stream_name"
+    },
+    {
+      "actual": "FORMAT_STREAM_BOUNDS",
+      "expected": "FORMAT_STREAM_BOUNDS",
+      "id": "format_stream_bounds"
+    },
+    {
+      "actual": "FORMAT_STREAM_OVERLAP",
+      "expected": "FORMAT_STREAM_OVERLAP",
+      "id": "format_stream_overlap"
+    },
+    {
+      "actual": "INTEGRITY_STREAM_SHA256",
+      "expected": "INTEGRITY_STREAM_SHA256",
+      "id": "integrity_stream"
+    },
+    {
+      "actual": "FORMAT_SEMANTIC_FORMAT",
+      "expected": "FORMAT_SEMANTIC_FORMAT",
+      "id": "semantic_format"
+    },
+    {
+      "actual": "FORMAT_SEMANTIC_VERSION",
+      "expected": "FORMAT_SEMANTIC_VERSION",
+      "id": "semantic_version"
+    }
+  ],
+  "corpus_sha256": "b47359a7b47689adc14ec8ed8345328b31cbed4dd16979ee562d37a75f4217ad",
+  "format": "EPTBPythonParserParity",
+  "mismatch_count": 0,
+  "version": "0.4.0"
+}

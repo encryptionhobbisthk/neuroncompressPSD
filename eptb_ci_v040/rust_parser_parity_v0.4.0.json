@@ -1,0 +1,158 @@
+{
+  "format": "EPTBRustParserParity",
+  "version": "0.4.0",
+  "case_count": 25,
+  "mismatch_count": 0,
+  "cases": [
+    {
+      "id": "ok",
+      "expected": "OK",
+      "actual": "OK",
+      "pass": true
+    },
+    {
+      "id": "limit_block_bytes",
+      "expected": "RESOURCE_MAX_BLOCK_BYTES",
+      "actual": "RESOURCE_MAX_BLOCK_BYTES",
+      "pass": true
+    },
+    {
+      "id": "limit_header_bytes",
+      "expected": "RESOURCE_MAX_HEADER_BYTES",
+      "actual": "RESOURCE_MAX_HEADER_BYTES",
+      "pass": true
+    },
+    {
+      "id": "limit_payload_bytes",
+      "expected": "RESOURCE_MAX_PAYLOAD_BYTES",
+      "actual": "RESOURCE_MAX_PAYLOAD_BYTES",
+      "pass": true
+    },
+    {
+      "id": "limit_tensor_words",
+      "expected": "RESOURCE_MAX_TENSOR_WORDS",
+      "actual": "RESOURCE_MAX_TENSOR_WORDS",
+      "pass": true
+    },
+    {
+      "id": "limit_block_words",
+      "expected": "RESOURCE_MAX_BLOCK_WORDS",
+      "actual": "RESOURCE_MAX_BLOCK_WORDS",
+      "pass": true
+    },
+    {
+      "id": "limit_stream_decoded",
+      "expected": "RESOURCE_MAX_STREAM_DECOMPRESSED_BYTES",
+      "actual": "RESOURCE_MAX_STREAM_DECOMPRESSED_BYTES",
+      "pass": true
+    },
+    {
+      "id": "limit_arena",
+      "expected": "RESOURCE_MAX_ARENA_BYTES",
+      "actual": "RESOURCE_MAX_ARENA_BYTES",
+      "pass": true
+    },
+    {
+      "id": "limit_stream_count",
+      "expected": "RESOURCE_MAX_STREAM_COUNT",
+      "actual": "RESOURCE_MAX_STREAM_COUNT",
+      "pass": true
+    },
+    {
+      "id": "format_truncated",
+      "expected": "FORMAT_TRUNCATED",
+      "actual": "FORMAT_TRUNCATED",
+      "pass": true
+    },
+    {
+      "id": "format_magic",
+      "expected": "FORMAT_MAGIC",
+      "actual": "FORMAT_MAGIC",
+      "pass": true
+    },
+    {
+      "id": "format_length",
+      "expected": "FORMAT_LENGTH",
+      "actual": "FORMAT_LENGTH",
+      "pass": true
+    },
+    {
+      "id": "integrity_block",
+      "expected": "INTEGRITY_BLOCK_SHA256",
+      "actual": "INTEGRITY_BLOCK_SHA256",
+      "pass": true
+    },
+    {
+      "id": "format_json",
+      "expected": "FORMAT_JSON",
+      "actual": "FORMAT_JSON",
+      "pass": true
+    },
+    {
+      "id": "format_json_root",
+      "expected": "FORMAT_JSON_ROOT",
+      "actual": "FORMAT_JSON_ROOT",
+      "pass": true
+    },
+    {
+      "id": "format_streams",
+      "expected": "FORMAT_STREAMS",
+      "actual": "FORMAT_STREAMS",
+      "pass": true
+    },
+    {
+      "id": "format_word_count",
+      "expected": "FORMAT_WORD_COUNT",
+      "actual": "FORMAT_WORD_COUNT",
+      "pass": true
+    },
+    {
+      "id": "format_descriptor",
+      "expected": "FORMAT_DESCRIPTOR",
+      "actual": "FORMAT_DESCRIPTOR",
+      "pass": true
+    },
+    {
+      "id": "format_decoded_length",
+      "expected": "FORMAT_DECODED_LENGTH",
+      "actual": "FORMAT_DECODED_LENGTH",
+      "pass": true
+    },
+    {
+      "id": "format_stream_name",
+      "expected": "FORMAT_STREAM_NAME",
+      "actual": "FORMAT_STREAM_NAME",
+      "pass": true
+    },
+    {
+      "id": "format_stream_bounds",
+      "expected": "FORMAT_STREAM_BOUNDS",
+      "actual": "FORMAT_STREAM_BOUNDS",
+      "pass": true
+    },
+    {
+      "id": "format_stream_overlap",
+      "expected": "FORMAT_STREAM_OVERLAP",
+      "actual": "FORMAT_STREAM_OVERLAP",
+      "pass": true
+    },
+    {
+      "id": "integrity_stream",
+      "expected": "INTEGRITY_STREAM_SHA256",
+      "actual": "INTEGRITY_STREAM_SHA256",
+      "pass": true
+    },
+    {
+      "id": "semantic_format",
+      "expected": "FORMAT_SEMANTIC_FORMAT",
+      "actual": "FORMAT_SEMANTIC_FORMAT",
+      "pass": true
+    },
+    {
+      "id": "semantic_version",
+      "expected": "FORMAT_SEMANTIC_VERSION",
+      "actual": "FORMAT_SEMANTIC_VERSION",
+      "pass": true
+    }
+  ]
+}
